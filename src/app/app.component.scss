@@ -1,0 +1,43 @@
+.spacer {
+    flex: 1 1 auto;
+}
+.middle-spacer {
+    flex: 0.15 0 auto;
+    color: black;
+}
+
+.mat-toolbar{
+    background-color: white;
+    color: black;
+    display:flex;
+    position: fixed;
+    justify-content: space-between;
+}
+
+.logo {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    font-size: 1em;
+    span{
+        color: var(--primary-color);     
+    }
+}
+.nav-buttons{
+    margin-right:3em;
+}
+.content{
+    font-weight: bold;
+    font-size: 1em;
+}
+// section{
+//     padding: 5em 2em;
+// }
+// .hero{
+//     text-align: center;
+// }
+// .left-col{
+//     .subhead{
+//         text-transform: uppercase;
+//     }
+// }

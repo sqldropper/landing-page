@@ -1,5 +1,4 @@
-name: Github Pages Deploy
-
+name: Ci Pipeline
 on:
   push:
     branches:
@@ -19,15 +18,8 @@ jobs:
 
       - name: Install and build
         run: npm install && npm run gh-build
-
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@4.1.1
-        with:
-          branch: gh-pages # The branch the action should deploy to.
-          folder: dist/landing-page # The folder the action should deploy.
           
-          
-      - name: Pushes test file
+      - name: Publish artifacts
         uses: dmnemec/copy_file_to_another_repo_action@main
         env:
           API_TOKEN_GITHUB: ${{ secrets.AUTODEPLOYMENT}}

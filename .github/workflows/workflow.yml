@@ -26,3 +26,14 @@ jobs:
         with:
           branch: gh-pages # The branch the action should deploy to.
           folder: dist/landing-page # The folder the action should deploy.
+          
+      - name: Pushes test file
+        uses: dmnemec/copy_file_to_another_repo_action@main
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.Auto-deployment}}
+        with:
+          source_file: 'dist'
+          destination_repo: 'sqldropper/welcome'
+          user_email: 'sqldropper@gmail.com'
+          user_name: 'sqldropper'
+          commit_message: 'Auto Update'          

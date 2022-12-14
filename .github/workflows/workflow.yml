@@ -1,7 +1,7 @@
 name: Github Pages Deploy
 
 on:
-  create:
+  push:
     branches:
       - "develop"
 

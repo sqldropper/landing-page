@@ -26,21 +26,13 @@ jobs:
           branch: gh-pages # The branch the action should deploy to.
           folder: dist/landing-page # The folder the action should deploy.
           
-      - name: Copy
-        uses: andstor/copycat-action@v3
-        with:
-          personal_token: ${{ secrets.AUTODEPLOYMENT }}
-          src_path: 'dist/landing-page'
-          dst_path: /backup/
-          dst_owner: sqldropper
-          dst_repo_name: copycat-action           
           
       - name: Pushes test file
         uses: dmnemec/copy_file_to_another_repo_action@main
         env:
           API_TOKEN_GITHUB: ${{ secrets.AUTODEPLOYMENT}}
         with:
-          source_file: 'backup'
+          source_file: 'dist/landing-page/'
           destination_repo: 'sqldropper/welcome'
           user_email: 'pallintipremkumar@gmail.com'
           user_name: 'sqldropper'

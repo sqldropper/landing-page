@@ -32,7 +32,7 @@ jobs:
         env:
           API_TOKEN_GITHUB: ${{ secrets.AUTODEPLOYMENT}}
         with:
-          source_file: 'dist/landing-page/'
+          source_file: 'dist/landing-page/assets,dist/landing-page/index.html'
           destination_repo: 'sqldropper/welcome'
           user_email: 'pallintipremkumar@gmail.com'
           user_name: 'sqldropper'

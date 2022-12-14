@@ -33,6 +33,6 @@ jobs:
         with:
           source_file: 'dist'
           destination_repo: 'sqldropper/welcome'
-          user_email: 'sqldropper@gmail.com'
+          user_email: 'pallintipremkumar@gmail.com'
           user_name: 'sqldropper'
           commit_message: 'Auto Update'          
